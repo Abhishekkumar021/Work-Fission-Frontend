@@ -108,7 +108,7 @@ export default function ProductList({ products, search }) {
     product.name.toLowerCase().includes(search.toLowerCase()) ||
     product.description.toLowerCase().includes(search.toLowerCase())
   );
-
+  console.log("Filtered : ", filtered)
   if (filtered.length === 0) {
     return (
       <div className="flex flex-col justify-center items-center h-96">

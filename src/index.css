@@ -13,7 +13,7 @@
   /* height: 200px; */
   padding: 0 15px 0 0;
   &::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8 !important;
+    background: #a8a8a8 !important; 
   }
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(83, 83, 83, 0.07);
