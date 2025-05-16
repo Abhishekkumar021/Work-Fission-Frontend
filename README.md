@@ -1,10 +1,15 @@
-# WorkFission Frontend
+# 💻 WorkFission Frontend
 
 This is the frontend for the Mini E-Commerce Platform, built with **React.js** and **Tailwind CSS** using Vite. It allows users to submit products, view all products, and search/filter products.
 
 ---
 
-## Directory Structure
+### 🗄️Check out my backend repository
+🔗 [workfission-backend](https://github.com/Abhishekkumar021/Work-Fission-Backend)
+
+---
+
+## 📁 Directory Structure
 
 ```
 workfission-frontend/
@@ -38,7 +43,7 @@ workfission-frontend/
 
 ---
 
-## Environment Variables
+## 🌐 Environment Variables
 
 Create a `.env` file in the root directory:
 
@@ -49,15 +54,15 @@ VITE_ORIGIN=http://localhost:3000
 
 ---
 
-## Setup Instructions
+## ⚙️ Setup Instructions
 
-1. **Install dependencies:**
+1. **✍️ Install dependencies:**
    ```sh
    cd workfission-frontend
    npm install
    ```
 
-2. **Start the development server:**
+2. **🚀 Start the development server:**
    ```sh
    npm run dev
    ```
@@ -65,7 +70,7 @@ VITE_ORIGIN=http://localhost:3000
 
 ---
 
-## Features
+## ✨ Features
 
 - **Product Submission Tab:**  
   - Enter product name, price, description, and optional image URLs (comma separated).
@@ -85,7 +90,7 @@ VITE_ORIGIN=http://localhost:3000
 
 ---
 
-## What's Working
+## 📌 What's Working
 
 - [x] Product submission form with validation
 - [x] Product list fetched from backend
@@ -96,7 +101,7 @@ VITE_ORIGIN=http://localhost:3000
 
 ---
 
-## Screenshots
+## 📷 Screenshots
 
 Below are some screenshots demonstrating the app’s features.  
 **Replace the image links after uploading your screenshots to GitHub.**
@@ -115,19 +120,19 @@ Below are some screenshots demonstrating the app’s features.
 
 ---
 
-## Notes
+## 📝 Notes
 
 - Ensure your backend is running and accessible at the URL specified in `VITE_ORIGIN`.
 - You can extend the search to be contextual/semantic by updating the backend and frontend logic.
 
 ---
 
-## License
+## 📍 License
 
 MIT
 
 ---
 
-## Author
+## 📍 Author
 
 Abhishek Kumar
