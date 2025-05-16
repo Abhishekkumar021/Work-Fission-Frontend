@@ -108,7 +108,7 @@ Below are some screenshots demonstrating the app’s features.
 ![My Products Tab](https://github.com/your-username/your-repo-name/blob/main/screenshots/my-products.png)
 
 ### My Products Tab With Search
-![My Products Tab](https://github.com/your-username/your-repo-name/blob/main/screenshots/my-products.png)
+![My Products Tab With Search](src/assets/screenshots/My Products Tab With Search.png)
 
 ### Product Detail View
 ![Product Detail View](https://github.com/your-username/your-repo-name/blob/main/screenshots/product-detail.png)
