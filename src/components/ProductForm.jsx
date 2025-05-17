@@ -76,7 +76,7 @@ export default function ProductForm({ onSubmit }) {
     };
 
     return (
-        <div className="w-full max-w-7xl mx-auto p-6 dark:bg-white bg-slate-700 shadow-[0px_3px_1px_rgba(105,105,105,_1),_0_3px_5px_rgba(47,79,79,_1)] rounded-lg dark:text-gray-800 text-slate-200">
+        <div className="w-full md:max-w-7xl max-w-full mx-auto p-6 my-20 xs:mt-0 dark:bg-white bg-slate-700 shadow-[0px_3px_1px_rgba(105,105,105,_1),_0_3px_5px_rgba(47,79,79,_1)] rounded-lg dark:text-gray-800 text-slate-200">
             <h1 className="text-3xl font-bold mb-6 text-center dark:text-gray-800 text-slate-100 ">Product Submission</h1>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -86,7 +86,7 @@ export default function ProductForm({ onSubmit }) {
                     // { label: 'Image URL', name: 'image_url', type: 'text' },
                 ].map(({ label, name, type }) => (
 
-                    <div key={name} className="flex items-center">
+                    <div key={name} className="flex flex-col xs:flex-row xs:items-center items-start xs:text-center text-left gap-y-2">
 
                         <label htmlFor={name} className="w-40 text-lg font-semibold dark:text-gray-700 text-slate-100">{label} : </label>
 
@@ -104,7 +104,7 @@ export default function ProductForm({ onSubmit }) {
                     </div>
 
                 ))}
-                <div className="flex items-center">
+                <div className="flex flex-col xs:flex-row xs:items-center items-start xs:text-center text-left gap-y-2">
 
                     <label htmlFor='Image URL' className="w-40 text-lg font-semibold dark:text-gray-700 text-slate-100">Image URL : </label>
 
@@ -119,7 +119,7 @@ export default function ProductForm({ onSubmit }) {
                         className="w-xl max-w-full flex-1 dark:text-gray-700 text-slate-100 min-h-20  border border-gray-300 dark:border-slate-400 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-y"
                     />
                 </div>
-                <div className="flex items-center">
+                <div className="flex flex-col xs:flex-row xs:items-center items-start xs:text-center text-left gap-y-2">
 
                     <label htmlFor='description' className="w-40 text-lg font-semibold dark:text-gray-700 text-slate-100">Description : </label>
 
@@ -145,6 +145,7 @@ export default function ProductForm({ onSubmit }) {
                         Submit
                     </button>
                 </div>
+
             </form>
         </div>
     );

@@ -28,7 +28,7 @@ function Carousel({ images, interval = 2000 }) {
   };
 
   return (
-    <div className="relative w-full h-[650px] overflow-hidden rounded-lg cursor-pointer">
+    <div className="relative w-full md:h-[650px] h-screen overflow-hidden rounded-lg cursor-pointer">
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
@@ -77,10 +77,10 @@ export default function ProductDetail() {
 
   return (
 
-    <div className="w-full max-h-screen max-w-6xl mx-auto p-4 bg-white rounded-lg shadow">
+    <div className="w-full max-h-full max-w-full mx-auto p-4 bg-white rounded-lg shadow">
       <div
         key={product.id}
-        className=" flex h-full gap-8 w-full p-2 max-w-full mx-auto bg-gray-200 dark:bg-slate-600 text-slate-800 dark:text-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-101 hover:shadow-[0_15px_35px_rgba(255,255,255,0.3)] hover:drop-shadow-2xl"
+        className="flex md:flex-row flex-col h-full gap-8 w-full p-2 max-w-full mx-auto bg-gray-200 dark:bg-slate-600 text-slate-800 dark:text-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-101 hover:shadow-[0_15px_35px_rgba(255,255,255,0.3)] hover:drop-shadow-2xl"
       >
         <div className='w-full mx-auto'>
 
@@ -92,7 +92,7 @@ export default function ProductDetail() {
         <div className="w-full p-2">
           <h2 className="text-xl font-bold text-justify ">{product.name}</h2>
           <p className="text-xl font-semibold text-justify">Price : $ {product.price}</p>
-          <div className="text-slate-700 hover:text-gray-700 dark:text-slate-300 dark:hover:text-slate-200 max-h-[580px] overflow-y-auto mt-8" id="description">
+          <div className="text-slate-700 hover:text-gray-700 dark:text-slate-300 dark:hover:text-slate-200 md:max-h-[580px] h-full md:overflow-y-auto overflow-hidden mt-8 md:pr-4" id="prod-detail-description">
             <p className="text-justify text-lg" >
               {product.description}
             </p>

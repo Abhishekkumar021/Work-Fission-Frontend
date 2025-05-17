@@ -4,29 +4,43 @@
 
   --font-display: "system-ui", "Fira Code", "Segoe UI", Helvetica, Arial, sans-serif, ;
 
+  --breakpoint-xss: 332px;
+  --breakpoint-xs: 480px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-custom: 1920px;
+
 }
 
-#description {
+
+#prod-detail-description {
   overflow-y: auto;
   overflow-x: hidden;
   /* width: 200px; */
   /* height: 200px; */
-  padding: 0 15px 0 0;
+  /* padding: 0 15px 0 0; */
+
   &::-webkit-scrollbar-thumb:hover {
-    background: #a8a8a8 !important; 
+    background: #a8a8a8 !important;
   }
+
   &::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(83, 83, 83, 0.07);
     background-color: #f1f1f1;
     border-radius: 999px;
-  
+
   }
+
   &::-webkit-scrollbar {
     width: 7px;
     background-color: #f1f1f1;
     border-radius: 999px;
 
   }
+
   &::-webkit-scrollbar-thumb {
     background-color: slategrey;
     border-radius: 999px;
