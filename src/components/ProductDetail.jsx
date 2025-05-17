@@ -28,7 +28,7 @@ function Carousel({ images, interval = 2000 }) {
   };
 
   return (
-    <div className="relative w-full md:h-[650px] h-screen overflow-hidden rounded-lg cursor-pointer">
+    <div className="relative w-full lg:h-[650px] h-screen overflow-hidden rounded-lg cursor-pointer">
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
@@ -39,6 +39,7 @@ function Carousel({ images, interval = 2000 }) {
         <>
           <button
             onClick={goToPrevious}
+            
             className="flex justify-center items-center text-center absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-3xl bg-opacity-50 text-white px-2 py-1 rounded-full cursor-pointer"
           >
             &#129056;
