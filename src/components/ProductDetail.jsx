@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import { backendUrl } from '../utils';
 import Loader from './Loader';
@@ -8,15 +8,40 @@ import Loader from './Loader';
 function Carousel({ images, interval = 2000 }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const hasMultipleImages = images.length > 1;
+  const timerRef = useRef(null);
 
-  useEffect(() => {
-    if (!hasMultipleImages) return;
 
-    const timer = setInterval(() => {
+
+
+
+  const startAutoPlay = () => {
+    stopAutoPlay(); // Clear any existing timer
+    timerRef.current = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % images.length);
     }, interval);
+  };
 
-    return () => clearInterval(timer);
+  const stopAutoPlay = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
+  };
+
+
+  // useEffect(() => {
+  //   if (!hasMultipleImages) return;
+
+  //   const timer = setInterval(() => {
+  //     setCurrentIndex(prev => (prev + 1) % images.length);
+  //   }, interval);
+
+  //   return () => clearInterval(timer);
+  // }, [images, hasMultipleImages, interval]);
+
+  useEffect(() => {
+    if (hasMultipleImages) startAutoPlay();
+    return stopAutoPlay;
   }, [images, hasMultipleImages, interval]);
 
   const goToPrevious = () => {
@@ -28,7 +53,7 @@ function Carousel({ images, interval = 2000 }) {
   };
 
   return (
-    <div className="relative w-full lg:h-[650px] h-screen overflow-hidden rounded-lg cursor-pointer">
+    <div className="relative w-full lg:h-[650px] h-[600px] overflow-hidden rounded-lg cursor-pointer">
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
@@ -39,16 +64,20 @@ function Carousel({ images, interval = 2000 }) {
         <>
           <button
             onClick={goToPrevious}
-            
-            className="flex justify-center items-center text-center absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-3xl bg-opacity-50 text-white px-2 py-1 rounded-full cursor-pointer"
+
+            className="flex justify-center items-center text-center absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-500 text-3xl font-bold bg-opacity-50 text-white px-2 pb-2 rounded-full cursor-pointer"
           >
-            &#129056;
+            {/* &#129056; */}
+            ←
+            {/* ‹ */}
           </button>
           <button
             onClick={goToNext}
-            className="flex justify-center items-center text-center absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-50 text-white text-3xl px-2 py-1 rounded-full cursor-pointer"
+            className="flex justify-center items-center text-center absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-500 bg-opacity-50 text-white text-3xl font-bold px-2 pb-2 rounded-full cursor-pointer"
           >
-            &#129058;
+            {/* &#129058; */}
+            →
+            {/* › */}
           </button>
         </>
       )}
